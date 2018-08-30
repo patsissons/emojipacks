@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "emojipacks": "^0.2.1"
+    "emojipacks": "jackellenberger/emojipacks#update-selector-for-upload-page-rewrite"
   }
 }

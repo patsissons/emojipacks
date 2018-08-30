@@ -175,9 +175,9 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-emojipacks@^0.2.1:
+emojipacks@jackellenberger/emojipacks#update-selector-for-upload-page-rewrite:
   version "0.2.1"
-  resolved "https://registry.yarnpkg.com/emojipacks/-/emojipacks-0.2.1.tgz#ad8288491eafac1cd0ba907fffd240c25c2625ce"
+  resolved "https://codeload.github.com/jackellenberger/emojipacks/tar.gz/3651dd8aaafbcd3fe22c25742e55e73cd63a8dcd"
   dependencies:
     chalk "^1.1.0"
     cheerio "^0.19.0"

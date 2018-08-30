@@ -1,17 +1,17 @@
 #!/bin/bash
 
-subdomain=''
-email=''
-password=''
+subdomain=$1
+email=$2
+password=$3
 
-if [[ $1 -eq 0 ]] ; then
-  path='./packs'
-else
-  path="$1"
-fi
+# if [[ $1 -eq 0 ]] ; then
+#   path='./packs'
+# else
+#   path="$1"
+# fi
 
-for f in "$path"/*.yaml
+for f in "$4"/*.yaml
 do
   echo $f
-  emojipacks -s $subdomain -e $email -p $password -y $f;
+  yarn emojipacks -s $subdomain -e $email -p $password -y $f;
 done
