@@ -1,4 +1,9 @@
 {
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "/bin/sh ./batchUpload.sh"
+  },
   "dependencies": {
     "emojipacks": "jackellenberger/emojipacks#update-selector-for-upload-page-rewrite"
   }

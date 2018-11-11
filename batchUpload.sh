@@ -1,17 +1,15 @@
 #!/bin/bash
 
-subdomain=$1
-email=$2
-password=$3
+packs=$1; shift
 
-# if [[ $1 -eq 0 ]] ; then
-#   path='./packs'
-# else
-#   path="$1"
-# fi
+if [ ! -d "$packs" ]; then
+  echo "Usage: $0 <path_to_packs> [-s <subdomain>] [-e <email>] [-p <password>] [...args]"
+  yarn emojipacks --help
+  exit 1
+fi
 
-for f in "$4"/*.yaml
-do
-  echo $f
-  yarn emojipacks -s $subdomain -e $email -p $password -y $f;
+for pack in "$packs"/*.yaml; do
+  pack="$(dirname $pack)/$(basename $pack)"
+  echo "Uploading $(basename $pack) (emojipacks -y \"$pack\" $@)"
+  yarn emojipacks -y "$pack" $@
 done
